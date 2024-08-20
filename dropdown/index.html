@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>jQuery Subselect Plugin Examples</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.2/flatly/bootstrap.min.css">
+
+
+
+    <link rel="stylesheet" href="css/jquery.subselect.style.css" />
+</head>
+<body>
+    <div class="container my-3">
+        <div class="row">
+            <h1 class="col-md-12">jQuery Subselect Plugin Examples</h1>
+            <style>
+.download{ padding: 1.25rem; border:0; border-radius:3px; background-color:#4F46E5; color:#fff;cursor:pointer; text-decoration:none;}.download:hover{color: #fff}#carbonads{display:block;overflow:hidden;max-width:728px;position:relative;font-size:22px;box-sizing:content-box}#carbonads>span{display:block}#carbonads a{color:#4F46E5;text-decoration:none}#carbonads a:hover{color:#4F46E5}.carbon-wrap{display:flex;align-items:center}.carbon-img{display:block;margin:0;line-height:1}.carbon-img img{display:block;height:90px;width:auto}.carbon-text{display:block;padding:0 1em;line-height:1.35;text-align:left}.carbon-poweredby{display:block;position:absolute;bottom:0;right:0;padding:6px 10px;text-align:center;text-transform:uppercase;letter-spacing:.5px;font-weight:600;font-size:8px;border-top-left-radius:4px;line-height:1;color:#aaa!important}@media only screen and (min-width:320px) and (max-width:759px){.carbon-text{font-size:14px}}
+</style>
+<div><div id="carbon-block"></div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2783044520727903"
+     crossorigin="anonymous"></script>
+<!-- jQuery_Replace_Demo -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2783044520727903"
+     data-ad-slot="7325992188"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<p style="margin:2rem auto"><a class="download" href="https://www.jqueryscript.net/form/cascading-dependent-subselect.html">Download This Plugin</a> <a class="download" href="https://www.jqueryscript.net/">Back To jQueryScript</a></p>
+            <p class="lead">A lightweight cascading (dependent) dropdown jQuery plugin that has the ability to filter a select box depending on the value selected in another one.</p>
+            <form id="demo-form" class="col-md-6" novalidate="novalidate">
+                <fieldset>
+                    <legend>How the sub category can work</legend>
+
+                    <div class="form-group">
+                        <label for="ID1">Category</label>
+                        <select class="form-control" id="ID1" name="ID1">
+                            <option selected="selected" value="">Please select..</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                        </select>
+                    </div>
+                    <div class="form-group" data-related-sub-select="ID2">
+                        <label for="ID2" data-related-sub-select="ID2">Sub Category</label>
+                        <select class="form-control" id="ID2" name="ID2" data-parent-id="ID1">
+                            <option selected="selected" value="">Please select..</option>
+                            <option data-parent-value="1" value="1">Option 1_1</option>
+                            <option data-parent-value="1" value="2">Option 1_2</option>
+                            <option data-parent-value="2" value="3">Option 2_1</option>
+                            <option data-parent-value="2" value="4">Option 2_2</option>
+                            <option data-parent-value="3" value="5">Option 3_1</option>
+                            <option data-parent-value="3" value="6">Option 3_2</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ID3">Category</label>
+                        <select class="form-control" id="ID3" name="ID3" required="required" aria-required="true">
+                            <option selected="selected" value="">Please select..</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                        </select>
+                    </div>
+                    <div class="form-group" data-related-sub-select="ID4">
+                        <label for="ID4" data-related-sub-select="ID4">Sub Category</label>
+                        <select class="form-control" id="ID4" name="ID4" required="required" aria-required="true" data-parent-id="ID3">
+                            <option selected="selected" value="">Please select..</option>
+                            <option data-parent-value="1" value="1">Option 1_1</option>
+                            <option data-parent-value="1" value="2">Option 1_2</option>
+                            <option data-parent-value="2" value="3">Option 2_1</option>
+                            <option data-parent-value="2" value="4">Option 2_2</option>
+                            <option data-parent-value="3" value="5">Option 3_1</option>
+                            <option data-parent-value="3" value="6">Option 3_2</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="DUP">Independant Select List For Testing</label>
+                        <select class="form-control" id="DUP" name="DUP" required="required" aria-required="true">
+                            <option selected="selected" value="">Please select..</option>
+                            <option value="1">I Like Trains</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <input type="submit" class="btn btn-primary" />
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.subselect.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //form validation
+            $("#demo-form").validate();
+
+            //sub select source and initial load
+            $('select[data-parent-id]').initSubSelectSource();
+            $('select').onSelectChange();
+
+            //On change event
+            $('select').change(function () {
+                $('select').onSelectChange();
+            });
+        });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1VDDWMRSTH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1VDDWMRSTH');
+</script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+</body>
+</html>
